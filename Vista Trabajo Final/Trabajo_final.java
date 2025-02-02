@@ -522,6 +522,35 @@ public class Trabajo_final extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoClaveActionPerformed
 
+    private void btnEncriptarActionPerformed(java.awt.event.ActionEvent evt) {                                             
+    String abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+    String mensaje = txtMensaje.getText();
+
+    if (mensaje.isEmpty()) {
+        txtMensaje.setText("Por favor, ingrese un mensaje.");
+        return;
+    }
+
+    String resultadoCifrado = Cifradocesar.codificar(abecedario, mensaje);
+    txtMensaje.setText(resultadoCifrado);
+
+        // TODO add your handling code here:
+    } 
+
+      private void btnDesencriptarActionPerformed(java.awt.event.ActionEvent evt) {                                                
+    String abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+    String mensaje = txtMensaje.getText();
+
+    if (mensaje.isEmpty()) {
+        txtMensaje.setText("Por favor, ingrese un mensaje.");
+        return;
+    }
+
+    String resultadoDescifrado = Decifradocesar.decifrado(abecedario, mensaje);
+    txtMensaje.setText(resultadoDescifrado);
+        // TODO add your handling code here:
+    }  
+
     /**
      * @param args the command line arguments
      */
